@@ -1,3 +1,6 @@
 [submodule "game-plain"]
 	path = game-plain
 	url = https://github.com/huangwb8/game-plain.git
+[submodule "app-best-llm"]
+	path = app-best-llm
+	url = https://github.com/huangwb8/app-best-llm.git
