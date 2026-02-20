@@ -1,0 +1,3 @@
+[submodule "game-plain"]
+	path = game-plain
+	url = https://github.com/huangwb8/game-plain.git
