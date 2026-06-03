@@ -12,3 +12,5 @@ dist/
 # IDE
 .vscode/
 *.code-workspace
+tests/
+plans/
