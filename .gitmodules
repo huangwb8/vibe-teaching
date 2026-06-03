@@ -4,3 +4,6 @@
 [submodule "app-best-llm"]
 	path = app-best-llm
 	url = https://github.com/huangwb8/app-best-llm.git
+[submodule "nsfc-demo/ChineseResearchLaTeX"]
+	path = nsfc-demo/ChineseResearchLaTeX
+	url = https://github.com/huangwb8/ChineseResearchLaTeX.git
