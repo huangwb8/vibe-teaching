@@ -6,12 +6,15 @@
 
 ### Added（新增）
 
+- AGENTS.md 新增 `huangwb8/ChineseResearchLaTeX` 与 `huangwb8/skills` 的 skill 清单：列出当前远端仓库中所有 skill 名称及一句作用简介，并补充“按实际任务调用必要 skill”的原则
+- 新增 `reviews/` 系列综述交付物：围绕器官移植最近 5 年进展生成 EV/机器灌注、dd-cfDNA/多组学监测、猪到人异种移植临床进展三篇综述，并导出 Markdown、TeX、PDF、Word 与 BibTeX 参考库
 - AGENTS.md 新增「工具链与依赖」章节：说明 ChineseResearchLaTeX 模板（青年标书模板位于 `projects/NSFC_Young/`）、huangwb8/skills 技能集与 XeLaTeX 编译环境
 - AGENTS.md「核心工作流」新增标书结构与 `nsfc-*` 技能映射表及撰写交付流程
 - `.gitignore` 新增 LaTeX 编译中间产物忽略规则（保留成稿 PDF）
 
 ### Changed（变更）
 
+- 统一 `reviews/` 三篇综述的默认样式：Markdown 章节改为“摘要 / 引言 / 主体段 / 讨论 / 展望 / 结论”骨架，LaTeX 改为 `ctex + natbib + BibTeX` 原生模板，并重新导出 PDF 与 Word
 - 将 AGENTS.md / README.md 由「通用项目」模板定制为「国自然青年科学基金标书 demo」：明确项目目标、产出物与 demo 定位
 
 ## [1.0.0] - 2026-06-03
