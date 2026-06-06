@@ -2,6 +2,10 @@
 
 ---
 
+/Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri 写得干巴巴的。 我希望你在合适的位置插入具有表现力的、与综述内容相协调的表或者图。 如果你要画图，请使用 auto-draw-plot skill 使用 gpt-image-2 模型来画（优化轮次： 2 次）。
+
+---
+
 /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/pig-to-human-xenotransplantation-clinical-progress /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ddcfDNA-multiomics-rejection-monitoring 写得太简略。 请细致化。 开多agent独立地写。 
 
 ---
