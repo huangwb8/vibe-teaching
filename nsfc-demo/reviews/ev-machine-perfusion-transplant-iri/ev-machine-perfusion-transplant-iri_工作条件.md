@@ -20,7 +20,7 @@
 
 ## Relevance Scoring & Selection
 
-- 评分方法：围绕 EV 递送、IRI 固有免疫、机器灌注、灌注液标志物和临床转化进行语义分层。
+- 评分方法：按 EV 递送、IRI 固有免疫、机器灌注、灌注液标志物和临床转化进行语义分层。
 - 选中文献：90 篇。
 - 参考文献：`ev-machine-perfusion-transplant-iri_参考文献.bib`
 - 选文文件：`.systematic-literature-review/artifacts/selected_papers_ev-machine-perfusion-transplant-iri.jsonl`
@@ -41,4 +41,3 @@
 - 引用键已检查，无缺失。
 - 已按 systematic-literature-review 默认骨架导出 Markdown、TeX、PDF、Word。
 - PDF 导出存在少量参考文献非拉丁字符字体警告，不影响文件生成。
-

@@ -20,7 +20,7 @@
 
 ## Relevance Scoring & Selection
 
-- 评分方法：围绕肾移植临床验证、心/肺/肝应用、ABMR/DSA、尿液外泌体与转录组、整合风险模型进行语义分层。
+- 评分方法：按肾移植临床验证、心/肺/肝应用、ABMR/DSA、尿液外泌体与转录组、整合风险模型进行语义分层。
 - 选中文献：90 篇。
 - 参考文献：`ddcfDNA-multiomics-rejection-monitoring_参考文献.bib`
 - 选文文件：`.systematic-literature-review/artifacts/selected_papers_ddcfDNA-multiomics-rejection-monitoring.jsonl`
@@ -41,4 +41,3 @@
 - 引用键已检查，无缺失。
 - 已按 systematic-literature-review 默认骨架导出 Markdown、TeX、PDF、Word。
 - PDF 导出存在少量参考文献字符警告，不影响文件生成。
-

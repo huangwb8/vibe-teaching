@@ -2,6 +2,10 @@
 
 ---
 
+/Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/pig-to-human-xenotransplantation-clinical-progress 写得太简略。 请细致化。 
+
+---
+
 /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews 里的综述的样式，感觉和 systematic-literature-review skill 的默认样式差别很大。 请优化下。
 
 ---

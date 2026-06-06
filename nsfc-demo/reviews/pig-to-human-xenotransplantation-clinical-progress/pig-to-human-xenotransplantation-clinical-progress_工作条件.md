@@ -20,7 +20,7 @@
 
 ## Relevance Scoring & Selection
 
-- 评分方法：围绕人体猪肾/猪心应用、基因编辑供体设计、免疫/补体/凝血损伤、感染监管、伦理和临床试验准备进行语义分层。
+- 评分方法：按人体猪肾/猪心应用、基因编辑供体设计、免疫/补体/凝血损伤、感染监管、伦理和临床试验准备进行语义分层。
 - 选中文献：90 篇；另补充 3 条 NEJM 关键临床文献到 BibTeX。
 - 参考文献：`pig-to-human-xenotransplantation-clinical-progress_参考文献.bib`
 - 选文文件：`.systematic-literature-review/artifacts/selected_papers_pig-to-human-xenotransplantation-clinical-progress.jsonl`
@@ -41,4 +41,3 @@
 - 引用键已检查，无缺失。
 - 已按 systematic-literature-review 默认骨架导出 Markdown、TeX、PDF、Word。
 - PDF 导出存在少量希腊字母/参考文献字体警告，不影响文件生成。
-
