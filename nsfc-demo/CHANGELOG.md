@@ -14,6 +14,8 @@
 
 ### Changed（变更）
 
+- 精简 AGENTS.md：将冗长的远端 skill 全量清单压缩为项目常用 skill 速查，保留项目目标、核心 workflow、必要 skill 映射、编译、BAC 和变更记录规则
+- 为 `ev-machine-perfusion-transplant-iri` 综述插入 4 张机制/平台/质控/标志物决策表：增强 EV 在机器灌注语境下的角色区分、递送窗口、最小证据包和灌注液标志物框架，并重新导出 TeX/PDF/Word
 - 细化 `pig-to-human-xenotransplantation-clinical-progress` 综述：扩写临床时间线、供体猪工程、猪肾/猪心/猪肝/猪肺器官差异、免疫感染伦理监管和未来 3-5 年研究方向，并重新导出 TeX/PDF/Word
 - 细化 `ev-machine-perfusion-transplant-iri` 与 `ddcfDNA-multiomics-rejection-monitoring` 两篇综述：分别扩写 EV/机器灌注的机制、递送、标志物和转化试验设计，以及 dd-cfDNA/多组学监测的器官场景、证据边界和决策模型，并重新导出 PDF/Word
 - 使用 `nsfc-humanization` 对 `reviews/` 系列综述正文做去机器味润色：保留引用、数字、章节结构和证据边界，优化模板化句式与过度对称表达

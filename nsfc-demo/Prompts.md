@@ -2,6 +2,14 @@
 
 ---
 
+/Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri 里能不能用auto-draw-plot skill 使用 gpt-image-2 模型来画（优化轮次：1次； 模式：通用）来画新的图（画2个或以上的图），具体内容包括但不限于：1、目前机器灌注条件下细胞外囊泡调控移植器官缺血再灌注损伤及早期排斥的主流机制 2、未来的主流研究方向。如果 gpt-image-2 模型不能成功，不要回退至用其它模型来画图。
+
+---
+
+/Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri 里能不能用auto-draw-plot skill 使用 gpt-image-2 模型来画（优化轮次：1次； 模式：通用）来画图（画2个或以上的图； 一张一张画），具体内容包括但不限于：1、目前机器灌注条件下细胞外囊泡调控移植器官缺血再灌注损伤及早期排斥的主流机制 2、未来的主流研究方向。
+
+---
+
 /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri 写得干巴巴的。 我希望你在合适的位置插入具有表现力的、与综述内容相协调的表或者图。 如果你要画图，请使用 auto-draw-plot skill 使用 gpt-image-2 模型来画（优化轮次： 2 次）。
 
 ---

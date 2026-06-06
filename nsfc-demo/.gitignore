@@ -114,3 +114,4 @@ dmypy.json
 *.alg
 *.auxlock
 .systematic-literature-review/
+.draw-plot/
