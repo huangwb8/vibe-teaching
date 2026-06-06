@@ -2,7 +2,7 @@
 
 ---
 
-/Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/pig-to-human-xenotransplantation-clinical-progress 写得太简略。 请细致化。 
+/Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/pig-to-human-xenotransplantation-clinical-progress /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ddcfDNA-multiomics-rejection-monitoring 写得太简略。 请细致化。 开多agent独立地写。 
 
 ---
 

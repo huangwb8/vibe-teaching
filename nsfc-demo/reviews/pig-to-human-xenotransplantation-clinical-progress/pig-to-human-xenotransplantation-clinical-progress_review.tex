@@ -1,127 +1,288 @@
-\documentclass[11pt,a4paper]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage{ctex}
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{parskip}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{bm}
-\usepackage[numbers,sort&compress]{natbib}
-\renewcommand*{\bibfont}{\footnotesize}
-\bibliographystyle{gbt7714-numerical}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\PassOptionsToPackage{space}{xeCJK}
+\documentclass[
+  chinese,
+  11pt,a4paper]{article}
 \usepackage{xcolor}
-\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \ifXeTeX
+    \usepackage{xeCJK}
+    \setCJKmainfont[]{Songti SC}
+  \fi
+  \ifLuaTeX
+    \usepackage[]{luatexja-fontspec}
+    \setmainjfont[]{Songti SC}
+  \fi
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
 \hypersetup{
+  pdftitle={猪器官移植到人：2021-2026 年临床进展、关键风险与未来 3-5 年研究方向},
+  pdflang={zh-CN},
   colorlinks=true,
-  linkcolor=blue,
-  urlcolor=cyan,
-  pdftitle={猪器官移植到人：2021-2026 年临床进展、关键风险与未来 3-5
-年研究方向},
-  pdfsubject={Systematic Literature Review},
-}
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={cyan},
+  pdfcreator={LaTeX via pandoc}}
 
 \title{猪器官移植到人：2021-2026 年临床进展、关键风险与未来 3-5
 年研究方向}
 \author{}
-\date{2026-06-03}
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\date{2026-06-06}
 
 \begin{document}
 \maketitle
-\tableofcontents
-\newpage
 
-\begin{abstract}
-猪到人异种移植在最近五年从长期前临床积累进入人体应用阶段。2021-2022
-年脑死亡受者模型和 NEJM
-报道的猪肾/猪心人体应用证明，经基因编辑的猪器官可以在人体循环中避免立即发生传统意义上的超急性排斥；2024-2026
-年，活体猪肾异种移植、生理稳态追踪和免疫图谱研究，又把问题推进到可重复性、感染监管、免疫抑制强度、伦理选择和正式临床试验设计层面。目前更稳妥的判断是，异种移植尚未成熟，但临床可行性已经足以推动领域进入严格优化阶段。未来
+\subsection{摘要}\label{ux6458ux8981}
+
+猪到人异种移植在 2021-2026
+年完成了从前临床非人灵长类模型、脑死亡受者模型、同情使用个案到早期临床试验许可的连续跃迁。经基因编辑的猪肾和猪心已经证明，传统意义上的超急性排斥可以被显著削弱，猪源器官也能在人体循环内短期承担滤过或泵血功能；但受者死亡、移植物切除、感染线索、凝血与内皮损伤、非典型抗体介导损伤和长期公共卫生监测，使领域必须从``能否接活''转向``能否重复、安全、可解释和可监管''。目前猪肾最接近规范临床路径，因为功能监测成熟且失败后仍可回到透析；猪心已进入临床试验门口，但伦理门槛和安全边界更窄；猪肝与肺更适合先通过离体灌注、桥接支持和短期功能平台积累证据。未来
 3-5
-年，猪肾最可能先进入可解释的早期临床试验；猪心仍需解决体量匹配、长期心肌适应、感染和排斥控制；猪肝/肺更适合先作为机器灌注、桥接支持或短期功能平台。研究重点应从单次突破转向连续病例安全性、标准化供体猪、跨物种感染监测、组织/液体活检整合和患者净获益评估。
-\end{abstract}
+年的关键任务，是建立可比较的供体猪标准、跨物种免疫与感染监测体系、患者净获益选择模型、机器灌注压力测试，以及能够触发停试和方案调整的早期临床试验框架。
 
-\section{引言}\label{ux5f15ux8a00}
+\subsection{引言}\label{ux5f15ux8a00}
 
-异种移植的临床动力来自供需矛盾。终末期肾病、终末期心衰和肝肺衰竭患者数量远超可用同种异体器官。猪作为供体来源具备繁殖、体量、器官解剖和基因工程可塑性优势，但跨物种屏障严苛：糖抗原、补体、凝血、炎症、先天免疫、T/B
-细胞反应、病毒安全和伦理监管共同决定结果。过去十年，GGTA1、CMAH、B4GALNT2
-等糖抗原敲除，人源补体/凝血调节蛋白表达，以及 PERV 处理、病原体净化和
+异种移植重新走到临床前台，根本原因不是单一技术突破，而是器官供需矛盾、基因编辑、免疫阻断、病原体控制和监管容忍度同时改变。终末期肾病患者可长期依赖透析，但生活质量、血管通路耗竭、心血管死亡和等待名单退出仍构成巨大负担；终末期心衰患者虽然可使用机械循环支持，却并非所有患者都适合或能长期获益；肝衰竭和肺衰竭患者的桥接窗口更短，等待同种异体器官的时间常常决定生死。猪作为供体来源，具备繁殖周期短、器官体量可选、解剖生理接近、封闭繁育可控和基因工程可塑性强等优势，因此成为实体器官异种移植的主要候选物种\citep{physiologicalbasisfor2024, geneticengineeringof2022}。
+
+这一轮转化热潮的关键变化，是跨物种屏障被拆解为若干可工程化、可监测、可调节的模块。传统猪器官在人体内会因
+Gal、Neu5Gc、Sda
+等糖抗原触发天然抗体、补体和血管内皮损伤；后续还会出现凝血失衡、炎症放大、先天免疫细胞吞噬、T/B
+细胞反应、抗猪抗体生成、病毒安全和生理不兼容等问题。GGTA1、CMAH、B4GALNT2
+等基因敲除，人源补体调节蛋白、凝血调节蛋白和免疫调节分子的表达，以及
+PERV
+处理和指定病原体阴性繁育，使猪源器官开始具备进入人体循环的最低安全前提\citep{whatgeneticmodifications2024, geneticallymodifiedpigs2025, specificpathogenfree20251}。但这些工程并没有消除异种移植的不确定性，只是把最早期的灾难性失败推迟到更复杂的免疫、感染和生理适配层面。
+
+过去五年人体研究的意义，在于它把长期依赖非人灵长类模型的推断转化为人体证据。2022
+年 NEJM 报道的两例猪肾移植到脑死亡受者，显示基因编辑猪肾在 54
+小时内可保持灌注、产尿并避免超急性排斥\citep{resultsoftwo2022}。2022
+年首例基因编辑猪心移植给终末期心衰患者，受者生存约两个月，证明猪心可在人体内短期维持循环，但也暴露了
+PCMV/PRV、非典型移植物损伤和高强度免疫抑制的风险\citep{griffith2022pigheartnejm, porcinecytomegalovirusin2022}。2024-2026
+年，活体猪肾受者、生理稳态追踪、免疫图谱和临床试验许可进一步推动领域进入``机制复盘
++
+规范试验''的阶段\citep{kawai2025porcinekidneynejm, physiologichomeostasisin2025, immuneprofilingin2026}。
+
+因此，猪到人异种移植目前不宜被简单描述为成功或失败。更准确的定位是：它已经越过``早期人体可行性''的门槛，却尚未越过``可重复临床治疗''的门槛。下一个阶段的核心，不是继续追逐单例纪录，而是回答哪些患者在何种供体、何种免疫方案、何种监测体系和何种退出机制下，能获得相对于现有治疗更高的净获益。
+
+\subsection{转化时间线与临床证据格局}\label{ux8f6cux5316ux65f6ux95f4ux7ebfux4e0eux4e34ux5e8aux8bc1ux636eux683cux5c40}
+
+2021-2026
+年的临床进展可以分为四类证据：脑死亡受者模型、同情使用或扩展准入活体个案、正式临床试验许可，以及离体灌注或桥接型器官支持。四类证据回答的问题不同，不能混为一谈。脑死亡受者模型适合观察人体循环中的超急性排斥、短期灌注、补体沉积和组织损伤，但不能充分回答长期感染、生活质量、免疫抑制耐受性和移植物持久性；同情使用个案能提供真实临床压力下的连续观察，却常受患者极重基础病和无替代治疗状态影响；正式临床试验可以标准化入排标准、供体批次、免疫方案和终点；离体灌注平台则适合在不直接植入的情况下测试人血暴露、凝血、补体和功能支持。
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+时间节点
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+主要类型
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+关键信息
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+对领域的意义
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2021-2022 & 脑死亡受者猪肾模型 &
+基因编辑猪肾在人体循环内短期灌注和产尿，未见传统超急性排斥\citep{resultsoftwo2022, firstclinicalgrade2022}
+& 证明人体短期模型可替代部分非人灵长类推断 \\
+2022 & 首例活体猪心同情使用 &
+终末期心衰受者生存约两个月，后续复盘提示感染、免疫和心肌损伤交织\citep{griffith2022pigheartnejm}
+& 证明猪心可短期承担生命支持，也暴露长期成功尚未建立 \\
+2024-2025 & 活体猪肾个案与生理/免疫复盘 &
+猪肾可带来短期透析脱离、生理稳态改善和可采样的人体免疫图谱\citep{kawai2025porcinekidneynejm, physiologichomeostasisin2025, immuneprofilingin2026}
+& 把评价重点从``是否产尿''推进到机制、风险和试验设计 \\
+2025 & 猪肾临床试验许可 & UKidney、EGEN-2784 等项目相继获得 FDA
+许可或扩展准入推进\citep{unitedtherapeutics2025ukidneyfda, egenesis2025egen2784ind}
+& 猪肾进入规范早期临床试验轨道 \\
+2025-2026 & 猪肝/肺灌注与肝支持平台 & alpha-Gal-KO
+猪肝/肺常温灌注、人血暴露和外部肝辅助产品进入临床或准临床场景\citep{advancesinxenotransplantation2025, bridgingtherapiesex2025}
+& 为高风险器官建立桥接和压力测试路径 \\
+2026 & 猪心临床试验许可与共识声明 & UHeart 获 FDA IND clearance；ISHLT
+发布心脏异种移植共识声明\citep{unitedtherapeutics2026uheartfda, the2026international2025}
+& 猪心从同情使用经验走向试验化准备 \\
+\end{longtable}
+}
+
+这条时间线说明，临床问题已经从``是否能避免超急性排斥''转向``三个更难的问题''。第一，短期功能能否转化为可预测的中期生存。肾脏可通过透析兜底，心脏则很难容忍突发失败；肝脏和肺脏的凝血、炎症和屏障功能更复杂。第二，免疫与感染能否达到可长期承受的平衡。强免疫抑制可能压低排斥，却同时放大机会性感染、潜伏病毒和跨物种病原体风险。第三，监管体系能否把单个患者的治疗风险和潜在公共卫生风险放在同一个框架中处理。异种移植不是普通器官移植的供体替代，而是一类需要长期样本留存、接触者策略和国际数据透明的临床技术\citep{internationalxenotransplantationassociat2, internationalxenotransplantationassociat3}。
+
+\subsection{供体猪工程：从免疫逃逸到生理兼容}\label{ux4f9bux4f53ux732aux5de5ux7a0bux4eceux514dux75abux9003ux9038ux5230ux751fux7406ux517cux5bb9}
+
+供体猪工程的第一目标是降低天然抗体和补体介导的立即损伤。Gal 抗原由 GGTA1
+相关通路生成，是经典超急性排斥的核心靶点；Neu5Gc 和 Sda
+等糖抗原则可继续提供抗体结合位点。三糖抗原敲除因此成为许多供体猪设计的基础。单纯敲除并不足以应对缺血再灌注、感染或内皮激活后的补体放大，所以人源
+CD46、CD55、CD59 等补体调节分子，以及
+thrombomodulin、EPCR、TFPI、CD47、HO-1
+等凝血、炎症或吞噬调节相关分子，被用于增强人血环境中的兼容性\citep{whatgeneticmodifications2024, geneticengineeringof2022, immunobiologicalbarriersto2023}。
+
+第二目标是处理``可移植''之外的生理适配。猪器官不是被动容器，其内分泌、局部代谢、凝血调节、内皮反应和生长程序都可能与人体需求不匹配。例如猪心需要体量匹配并避免移植后过度生长；猪肾需要维持人类酸碱、电解质和蛋白处理；猪肝涉及复杂凝血因子、血小板消耗和补体代谢；猪肺则暴露于高流量低压循环和巨大血气交换界面。10
+基因编辑供体猪通常将多种人源保护基因与抗原敲除结合，试图同时覆盖免疫、补体、凝血和生长控制\citep{specificpathogenfree20251, geneticallyengineeredpig2025}。eGenesis
+的肾供体路线还强调 PERV
+相关序列失活，反映出病毒安全已经被纳入产品属性，而不只是术后监测问题\citep{egenesis2025egen2784ind}。
+
+第三目标是把供体猪从``科研动物''转化为``可监管产品''。这要求每批供体猪具有可追溯的遗传背景、病原体阴性状态、繁育环境、器官质控记录、转运和采集流程。对临床试验而言，供体猪的基因编辑组合不能频繁改变，否则前一例受者的结局很难解释后一例受者的风险。领域需要的是最小可接受供体标准，而不是无限叠加编辑数量。编辑越多，理论覆盖越广，但脱靶、表达量、基因间相互作用、繁育稳定性和监管复杂度也会增加。未来
+3-5
+年，比较不同供体平台时，应把``编辑数目''降级为描述变量，把交叉配型、人血灌注反应、病原体状态、器官功能和临床可重复性作为主要评价指标。
+
+\subsection{猪肾：最接近正式临床路径的器官}\label{ux732aux80beux6700ux63a5ux8fd1ux6b63ux5f0fux4e34ux5e8aux8defux5f84ux7684ux5668ux5b98}
+
+猪肾最可能率先进入可解释的临床试验路径，原因不只是肾脏技术成熟，更在于风险结构相对可管理。肾功能可通过尿量、肌酐、尿素氮、电解质、酸碱平衡、容量状态、蛋白尿和影像学连续评估；移植物失败后，患者理论上可以移除猪肾、停止部分免疫抑制并回到透析；肾移植领域已有成熟的活检诊断、供者特异性抗体、donor-derived
+cell-free
+DNA（dd-cfDNA）和感染监测框架。早期脑死亡模型、活体猪肾案例和人体免疫图谱共同显示，基因编辑猪肾能够在人体内短期承担滤过和稳态调节功能，并产生可分析的组织、血液和尿液信号\citep{resultsoftwo2022, kawai2025porcinekidneynejm, physiologichomeostasisin2025, immuneprofilingin2026}。
+
+但猪肾的关键问题并不是``是否能产尿''。早期产尿可以由血流灌注和肾小球滤过支持，却不能保证近端小管重吸收、浓缩稀释、蛋白处理、内分泌调节和长期内皮稳定。跨物种肾脏可能出现蛋白尿、血栓性微血管病、抗体介导损伤、补体沉积、炎症性内皮激活和药物毒性叠加。非人灵长类研究提示，蛋白尿本身还可能造成治疗性单克隆抗体尿丢失，从而削弱
 CD40/CD154
-轴免疫抑制，使前临床非人灵长类模型取得显著进展\cite{whatgeneticmodifications2024, geneticallymodifiedpigs2025, advancingxenotransplantationto2022}。
+阻断或补体抑制效果，形成``肾损伤-药物丢失-排斥加重''的循环\citep{novelfactorspotentially2024}。因此，猪肾试验终点不能只看肌酐下降或透析脱离，还应预设蛋白尿、内皮损伤、补体片段、抗猪抗体、猪源
+cfDNA、组织病理和病毒核酸的组合阈值。
 
-人体应用的突破改变了问题性质。2022 年 NEJM
-报道的两例猪到人肾异种移植脑死亡模型，为观察人体免疫和生理反应提供了比非人灵长类更直接的证据\cite{resultsoftwo2022}。同年，首例基因编辑猪心移植到终末期心衰患者，受者生存约两个月，证明心脏异种移植可在同情使用场景下实现短期生命支持，同时也暴露感染、免疫抑制和长期适应问题\cite{griffith2022pigheartnejm, cardiacxenotransplantationfrom2022}。2025
-年 NEJM 报道猪肾用于终末期肾病活体受者，以及 Nature Communications /
-Nature Medicine
-对活体猪肾受者的生理稳态和免疫图谱分析，标志着领域进入机制复盘和试验准备阶段\cite{kawai2025porcinekidneynejm, physiologichomeostasisin2025, immuneprofilingin2026}。
+猪肾临床试验还必须处理候选者选择的伦理张力。若候选者过于危重，死亡可能主要由基础病决定，难以评价移植物；若候选者相对稳定，透析作为替代治疗又使试验净获益难以成立。患者选择研究显示，只有当预期猪肾功能存续时间达到一定水平时，等待名单患者才可能在生存层面获得明确净获益；但若把透析负担、血管通路耗竭、生活质量和等待人肾概率纳入模型，部分高风险透析患者可能更接近临床均衡\citep{adatadriven2025}。这提示猪肾首批试验不应简单选择``最绝望''的患者，而应选择感染风险可控、免疫监测可执行、同种异体肾机会极低、透析负担明确且可理解长期随访义务的患者\citep{suggestedpatientselection2021, internationalxenotransplantationassociat}。
 
-\section{猪肾：最接近正式临床路径的器官}\label{ux732aux80beux6700ux63a5ux8fd1ux6b63ux5f0fux4e34ux5e8aux8defux5f84ux7684ux5668ux5b98}
+从研究设计看，猪肾试验适合采用哨兵病例、小队列、分阶段扩展和预定义停试规则。每例受者都应被视为机制研究平台：术前记录抗猪抗体谱、人白细胞抗原致敏、补体活性、凝血状态和感染背景；术中记录冷缺血、温缺血、再灌注反应和尿量；术后按固定时间采集血、尿、组织和病毒样本。若发生移植物功能下降，应能区分缺血再灌注损伤、抗体介导排斥、血栓性微血管病、感染、药物毒性和外科并发症。只有把失败原因拆清楚，后续供体工程和免疫方案才有改进方向。
 
-猪肾的临床路径相对清晰。肾功能可通过尿量、肌酐、电解质、酸碱平衡和容量状态连续评估；移植物失败后患者理论上可回到透析，风险可逆性强于心脏或肝脏；肾移植也已有成熟的活检、DSA、dd-cfDNA
-和免疫抑制监测框架。脑死亡模型和活体病例显示，基因编辑猪肾能够短期维持滤过和体液稳态，并为跨物种免疫图谱提供人体材料\cite{resultsoftwo2022, physiologichomeostasisin2025, immuneprofilingin2026}。
+\subsection{猪心：概念被证明后，试验化才刚开始}\label{ux732aux5fc3ux6982ux5ff5ux88abux8bc1ux660eux540eux8bd5ux9a8cux5316ux624dux521aux5f00ux59cb}
 
-但猪肾临床化不能只看``接上后能工作''。更关键的问题包括早期抗体介导损伤、血栓性微血管病、炎症性内皮激活、补体逃逸是否持久、蛋白尿和肾小管功能是否稳定、受者是否产生影响未来同种异体移植的抗体，以及免疫抑制是否可在感染风险可接受的范围内长期维持\cite{thecurrentissues2025, reducingearlygraft2024}。脑死亡模型虽然宝贵，但脑死亡后的激素、炎症和血流动力学状态与活体患者不同，仍不能替代正式临床试验。
+猪心异种移植的临床价值极高，因为终末期心衰患者的可替代方案有限，且等待人心移植的机会受体型、血型、肺血管阻力、机械支持并发症和地域因素影响。2022
+年首例基因编辑猪心移植显示，猪心可以在人体内短期承担生命支持功能，突破了长期停留在动物模型的局面\citep{griffith2022pigheartnejm}。但该病例也说明，心脏异种移植的失败不会像肾脏那样容易被透析兜底。循环衰竭、心肌水肿、心室壁增厚、微血管损伤、抗体变化、病毒线索和重症感染可能在短时间内交织，最终很难归因于单一机制。
 
-\section{猪心：概念已被证明，长期成功仍未建立}\label{ux732aux5fc3ux6982ux5ff5ux5df2ux88abux8bc1ux660eux957fux671fux6210ux529fux4ecdux672aux5efaux7acb}
+猪心的供体设计还面临器官特异性问题。心脏需要持续机械做功，体量和生长控制比肾脏更关键；移植后心肌肥厚、舒张功能障碍、冠状微循环损伤和内皮激活都可能导致不可逆性衰竭。连续非缺血保存、精准体量匹配、移植后负荷控制、心肌代谢监测和早期非侵入性损伤标志物，可能与基因编辑同样重要\citep{2025statusof2025, geneticallyengineeredpig2025}。PCMV/PRV
+的经验尤其提醒，供体猪病原体检测不能停留在术前单次阴性，而应包含繁育群体净化、敏感检测方法、器官采集前复核、术后连续核酸监测和阳性触发处置\citep{porcinecytomegalovirusin2022, comparisonofmethods2023}。
 
-猪心异种移植的临床意义巨大，因为终末期心衰患者可替代方案有限，机械循环支持并不等同于长期根治。2022
-年首例基因编辑猪心移植证明，跨物种心脏可以在人体内短期承担生命支持功能\cite{griffith2022pigheartnejm}。随后领域围绕体量匹配、连续非缺血保存、免疫抑制、PCMV/PRV
-感染、心肌过度生长、微血栓和慢性血管病展开复盘\cite{porcinecytomegalovirusin2022, 2025statusof2025, geneticallyengineeredpig2025}。
+2026 年 UHeart 获 FDA IND
+clearance，使猪心从同情使用经验进入临床试验门口。该试验拟从极小初始队列开始，评估
+10
+基因编辑猪心在终末期或晚期心衰、无其他治疗选择患者中的安全性和有效性，并设置独立数据监测与长期感染随访\citep{unitedtherapeutics2026uheartfda}。这不是``猪心已经成熟''的信号，而是监管机构允许在高度约束条件下获得人体数据。ISHLT
+关于临床心脏异种移植的共识声明也说明，心脏领域正在把供体选择、受者筛选、免疫抑制、感染监测、伦理同意和中心资质纳入共识化框架\citep{the2026international2025}。
 
-与猪肾不同，猪心失败往往没有透析式的低风险回退路径。因此，猪心早期临床试验的伦理门槛更高，更适合在无其他生命延续选择、机械支持不可行或作为严格桥接方案的患者中谨慎推进。未来若要从同情使用走向试验，必须证明供体猪病原体控制、心脏保存和受者免疫方案能够带来可重复的中期生存，而不能依赖单例突破。
+猪心未来 3-5
+年的现实目标，应是证明可重复的短中期生命支持，而不是立即追求广泛替代人心移植。最合理的早期候选者，是年龄、基础病、机械支持选择和同种异体移植机会共同构成``无其他合理选择''的患者；但即便如此，也必须避免把治疗困境转化为过度乐观的风险承诺。猪心试验的核心终点不应只包括生存，还应包括移植物生存、左室射血分数、右室功能、应变参数、心律失常、血栓/卒中、感染、免疫损伤、生活质量和运动能力。对每次失败，都需要进行组织病理、病毒、抗体、cfDNA、补体、凝血和药物暴露的联合复盘。
 
-\section{讨论：感染、安全与监管}\label{ux8ba8ux8bbaux611fux67d3ux5b89ux5168ux4e0eux76d1ux7ba1}
+\subsection{猪肝、猪肺与机器灌注：更适合从桥接和压力测试切入}\label{ux732aux809dux732aux80baux4e0eux673aux5668ux704cux6ce8ux66f4ux9002ux5408ux4eceux6865ux63a5ux548cux538bux529bux6d4bux8bd5ux5207ux5165}
 
-感染风险是异种移植区别于同种异体移植的根本维度。PCMV/PRV
-被认为与早期心脏异种移植结局密切相关，PERV
-虽然可通过供体筛选和基因编辑降低风险，但其公共卫生含义要求长期监测受者、密切接触者和样本库\cite{porcinecytomegalovirusin2022, virussafetyof2022}。正式试验需要明确供体猪指定病原体阴性标准、繁育设施质量、器官采集链路、术后病毒检测频率、阳性触发处置和长期随访责任。
+猪肝和猪肺的临床入口比猪肾和猪心更复杂。肝脏不仅是代谢和解毒器官，还是凝血、补体、血小板清除、胆汁生成和先天免疫调节中心。猪肝与人血相遇后，血小板消耗、凝血紊乱、内皮和
+Kupffer 细胞相互作用可能迅速限制功能维持；猪源 von Willebrand factor
+与人血小板受体、猪源组织因子通路抑制、thrombomodulin 和蛋白 C
+系统之间的不兼容，都会放大出血或血栓风险\citep{currentbarriersto2022, liverxenotransplantationfrom2026}。因此，猪肝更现实的早期路径不是长期整肝植入，而是外部肝辅助、离体肝灌注或急性肝衰竭桥接。
 
-伦理上，初始受试者选择必须避免把``无路可走''简单等同于``可接受任何风险''。候选者需要理解异种移植可能影响未来同种异体移植机会、需要长期感染监测、可能出现未知公共卫生风险，并可能承担高强度免疫抑制副作用\cite{suggestedpatientselection2021, expertopinionspecial2022, contextualvulnerabilityshould2023}。知情同意也不应只是一次签字，而应是包含教育、复核和独立伦理支持的连续过程。
+猪肺则面临血气屏障、肺血管低压系统、补体和中性粒细胞激活、肺水肿和炎症风暴等难题。肺脏血管床巨大，内皮与人血接触面积远高于许多器官，早期损伤可能迅速转化为氧合失败。alpha-Gal-KO
+猪肺常温机器灌注研究提示，离体平台可以捕捉血管阻力、氧合、炎症因子、补体激活和组织水肿等信号，为供体工程和药物干预提供安全窗口\citep{advancesinxenotransplantation2025}。但这些信号距离长期人体植入仍有明显距离。
 
-\section{机器灌注与异种移植的交叉机会}\label{ux673aux5668ux704cux6ce8ux4e0eux5f02ux79cdux79fbux690dux7684ux4ea4ux53c9ux673aux4f1a}
+机器灌注是连接供体工程和临床试验的关键工具。对猪肾、心、肝、肺而言，离体灌注不仅可延长保存时间，还可以作为``人血压力测试''：在移植前用标准化人血组分、候选受者血浆或模拟受者环境灌注器官，观察补体、凝血、血管阻力、乳酸清除、尿液生成、胆汁生成、氧合、细胞因子、cfDNA
+和病毒释放。若某个器官在离体人血暴露下迅速出现补体爆发或凝血失控，就不应被推进到人体植入。相反，灌注平台也可以用于递送补体抑制剂、抗炎药物、抗凝策略、基因调节载体或细胞外囊泡，为器官修复提供窗口\citep{bridgingtherapiesex2025}。
 
-机器灌注可能成为异种移植从``能移植''走向``能筛选和修复''的关键平台。对猪肾、猪肝、猪肺和猪心，离体灌注可用于评估血管阻力、代谢恢复、补体激活、凝血倾向、内皮损伤、病毒污染和人血暴露后的免疫反应。近年``xenoperfusion''概念和
-alpha-Gal-KO
-猪肝/肺常温机器灌注研究提示，灌注平台可作为人体前的功能压力测试\cite{advancesinxenotransplantation2025, bridgingtherapiesex2025}。
+从临床转化顺序看，猪肾最适合直接进入小规模植入试验；猪心需要在严格受者选择和中心资质下推进；猪肝和猪肺则更适合先以``桥接支持
++ 离体功能评价 +
+人血压力测试''建立安全边界。这样的路线并不保守，而是更符合器官特异性风险。异种移植真正需要的是可解释的失败和可迭代的成功，而不是把所有器官都按同一速度推向人体植入。
 
-这一路线对猪肝和猪肺尤其重要。肝脏涉及复杂合成、解毒、凝血和免疫功能，肺脏与血气屏障和炎症反应高度相关，直接长期植入人体风险更高。未来
+\subsection{讨论：免疫、感染、伦理与监管需要合并设计}\label{ux8ba8ux8bbaux514dux75abux611fux67d3ux4f26ux7406ux4e0eux76d1ux7ba1ux9700ux8981ux5408ux5e76ux8bbeux8ba1}
+
+异种移植的免疫风险不能用同种异体移植框架简单外推。天然抗体和补体只是第一层；即便三糖抗原敲除，受者仍可能存在低水平抗猪抗体、非糖抗原反应、内皮激活、先天免疫吞噬和
+T/B 细胞适应性反应。CD40/CD154
+共刺激阻断被广泛视为关键策略，但长期使用会带来感染、血栓、药物可及性和监测问题\citep{advancingxenotransplantationto2022, currentstatusof2022}。补体抑制、B
+细胞或浆细胞靶向、抗凝和抗炎治疗可能进一步降低损伤，却也会使感染风险和药物相互作用更复杂。未来方案设计的目标不应是最大免疫抑制，而是最小有效组合：在可接受感染风险下防止不可逆内皮和微血管损伤。
+
+感染安全是异种移植区别于常规移植的根本维度。PERV
+因整合在猪基因组中而具有特殊公共卫生含义，PCMV/PRV
+则在早期心脏案例复盘中受到高度关注。现有证据并未证明猪源病毒已经造成广泛人际传播风险，但``不确定''本身就要求长期监测、样本留存和透明报告\citep{virussafetyof2022, internationalxenotransplantationassociat2}。正式试验需要明确供体猪指定病原体阴性清单、检测方法学、检测频率、阳性结果处置、受者和密切接触者告知、样本库保存期限，以及跨中心数据共享。若感染监测只作为附属终点，试验就无法回答异种移植最受公众关注的问题。
+
+伦理问题同样不能被``患者无路可走''一句话解决。早期受者往往处于高度脆弱状态，可能高估获益、低估长期义务，或因无法获得同种异体器官而感到被迫接受实验性治疗。候选者需要理解：异种移植可能影响未来同种异体移植机会，需要长期甚至终身感染监测，可能涉及家庭或密切接触者告知，失败后可能回到原治疗路径，也可能产生无法预见的公共卫生责任\citep{expertopinionspecial2022, informedconsentfor2022, patientsinformationneeds2025}。患者态度研究显示，很多肾病患者愿意在功能接近同种异体移植时考虑猪肾，但对功能较差、桥接用途、感染、社会污名和动物伦理存在明显顾虑\citep{attitudesofpatients2023, transplantpatientsperceptions2025}。这说明知情同意必须是连续教育和复核过程，而不是一次签字。
+
+监管上，异种移植需要同时满足临床治疗、产品质量、动物源性材料和公共卫生监测的要求。供体猪更接近一种活体生物产品，其遗传构型、繁育环境、病原体控制和器官采集流程都必须可审计。受者管理也需要高资质中心、独立数据监测委员会、停试规则和长期随访资金。对公众而言，透明失败比选择性传播成功更重要。若某例受者死亡或移植物失败，报告应尽可能区分基础病进展、外科并发症、免疫排斥、感染、药物毒性和器官生理不兼容，而不是用``与移植物无关''或``排斥失败''进行过度简化。
+
+\subsection{展望：未来 3-5
+年的研究方向}\label{ux5c55ux671bux672aux6765-3-5-ux5e74ux7684ux7814ux7a76ux65b9ux5411}
+
+第一，建立猪肾早期临床试验的可比较框架。建议采用哨兵病例、小队列分阶段扩展、统一核心终点和预定义停试规则。核心终点应至少包括患者生存、猪肾存活、透析脱离时间、eGFR/肌酐、蛋白尿、ABMR/TMA、严重感染、移植物切除、回到透析能力、生活质量和未来同种异体移植可及性。每例受者都应有术前抗猪抗体谱、补体活性、凝血状态、感染背景和组织相容性记录。
+
+第二，形成``供体猪最小可接受标准''。该标准不应只罗列基因编辑数量，而应覆盖三糖抗原状态、人源补体/凝血/免疫调节分子表达、PERV/PCMV/PRV
+和其他指定病原体检测、繁育设施等级、体量匹配、器官功能、离体人血灌注反应、批次可追溯性和质量放行标准。不同供体平台之间应以功能和安全信号比较，而不是以编辑数量竞赛。
+
+第三，发展跨物种液体活检与组织图谱。dd-cfDNA、猪源
+cfDNA、细胞外囊泡、补体片段、凝血标志物、内皮损伤标志物、DSA/抗猪抗体、病毒核酸和尿液蛋白组应形成组合监测。对猪肾而言，尿液和血液可提供连续信号；对猪心而言，cfDNA、肌钙蛋白、心脏影像和心肌活检需要联合解释；对肝/肺桥接平台，则应重点关注凝血、炎症、氧合、胆汁和代谢指标。目标是早于不可逆功能下降识别损伤类型。
+
+第四，把机器灌注升级为准入测试和干预平台。未来每个拟植入猪源器官都应尽可能接受标准化离体灌注评价，尤其是人血或候选受者血浆压力测试。灌注期间记录血管阻力、补体、凝血、细胞因子、cfDNA、病毒核酸和器官特异功能，可帮助筛除高风险器官，也可用于测试补体抑制、抗凝、抗炎和内皮保护策略。猪肝和猪肺应优先在这一路径中积累证据。
+
+第五，优化免疫抑制的最小有效组合。CD40/CD154 阻断、补体抑制、B
+细胞或浆细胞靶向、T
+细胞控制、抗凝和抗炎治疗需要在小队列中进行机制化比较。研究设计应避免每例都使用不同组合，否则无法解释失败。更可行的做法是固定基础方案，仅在预定义生物标志物触发时进行阶梯式加药或撤药。
+
+第六，建立长期感染和公共卫生随访体系。异种移植受者应有终身随访计划、样本留存、病毒检测触发规则和跨中心报告标准。密切接触者监测需要在伦理上谨慎设计，既不能制造不必要的社会负担，也不能忽视潜在传播风险。国际登记系统应记录供体猪平台、病原体状态、免疫方案、临床结局和感染信号。
+
+第七，把患者选择从``绝望程度''转向``净获益概率''。猪肾候选者可优先考虑透析负担极高、等待同种异体肾概率极低、感染风险可控、依从性好且愿意长期随访者。猪心候选者应限于无其他合理治疗选择、预期短期死亡风险高但仍能承受手术和免疫抑制的患者。猪肝和猪肺早期更适合桥接支持或离体平台，而不是直接面向长期替代。
+
+第八，建立失败复盘的公开框架。未来 3-5
+年最有价值的数据未必都来自``成功病例''。移植物切除、功能衰退、感染阳性、非典型排斥、凝血危象和患者死亡都能提供关键机制线索。领域应预先定义最低报告集，包括供体猪信息、术前交叉配型、免疫方案、药物浓度、病毒检测、组织病理、cfDNA、补体、凝血、影像和临床事件时间线。只有失败可解释，下一代试验才会更安全。
+
+\subsection{结论}\label{ux7ed3ux8bba}
+
+猪到人异种移植已经从理论可行进入临床验证阶段，但它距离常规治疗仍有明显距离。猪肾因风险可回退、监测成熟和临床需求明确，最可能率先形成规范试验路径；猪心的临床意义同样重大，2026
+年试验许可和专业共识声明标志着领域进入新阶段，但其失败代价和伦理门槛决定了推进必须更谨慎；猪肝和猪肺则应优先通过机器灌注、外部支持和桥接应用建立安全边界。未来
 3-5
-年，猪肝/肺更现实的临床入口可能是短期桥接、离体灌注评估、人血灌注安全性和急性功能支持，而非立即追求长期植入。
-
-\section{展望：未来 3-5
-年研究方向}\label{ux5c55ux671bux672aux6765-3-5-ux5e74ux7814ux7a76ux65b9ux5411}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  猪肾早期临床试验应采用连续小队列、哨兵病例和预定义停试规则。核心终点应包括患者生存、移植物功能、严重感染、ABMR/TMA、回到透析能力、生活质量和未来同种异体移植可及性。
-\item
-  建立``供体猪最小可接受标准''。至少应覆盖三糖抗原敲除、人源补体/凝血调节、SLA/组织相容性策略、PERV/PCMV/PRV
-  检测、繁育环境、体量匹配和器官质控。
-\item
-  发展跨物种液体活检。dd-cfDNA、猪源
-  cfDNA、EV、补体片段、凝血标志物、DSA/抗猪抗体和病毒核酸应形成组合监测，用于早期区分缺血损伤、ABMR、感染和凝血微血管病。
-\item
-  用机器灌注做人血压力测试。移植前以受者血浆或标准化人血组分灌注，评估补体、凝血、内皮损伤和病毒释放，可帮助筛除高风险器官和优化个体化免疫方案。
-\item
-  比较 CD40/CD154 阻断、补体抑制、B
-  细胞/浆细胞靶向和抗凝策略的最小有效组合。目标不是最大免疫抑制，而是可长期承受的免疫-感染平衡。
-\item
-  建立长期公共卫生随访体系。异种移植试验的成功不仅是单个患者获益，还包括对潜在跨物种感染风险的透明监测、样本留存、数据共享和国际监管协调。
-\item
-  将患者选择从``绝望程度''转向``净获益概率''。猪肾候选者可优先考虑透析负担极高、同种异体移植机会极低但感染风险可控者；猪心候选者则需更严格的替代方案评估。
-\end{enumerate}
-
-\section{结论}\label{ux7ed3ux8bba}
-
-猪到人异种移植已经越过``是否可能''的第一道门槛，但尚未越过``是否可重复、可监管、可普及''的第二道门槛。猪肾最可能率先形成正式临床试验路径，因为失败后仍有透析回退，且监测框架成熟；猪心的临床意义同样重大，但风险承受空间更窄；猪肝和猪肺更适合先通过机器灌注和短期桥接建立安全边界。未来
-3-5
-年，领域更需要连续、透明、机制驱动的临床研究，把供体工程、免疫控制、感染监管和患者净获益放在同一个证据框架中。
+年，决定领域成败的不是单个患者存活纪录，而是能否建立标准化供体猪、可解释免疫与感染监测、患者净获益模型、严格停试规则和透明数据共享。异种移植真正成熟的标志，将是每一次成功和失败都能被转化为下一例患者更清晰、更可控的风险。
 
 \nocite{*}
 \bibliography{pig-to-human-xenotransplantation-clinical-progress_参考文献.bib}

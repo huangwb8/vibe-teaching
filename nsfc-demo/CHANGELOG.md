@@ -14,6 +14,7 @@
 
 ### Changed（变更）
 
+- 细化 `pig-to-human-xenotransplantation-clinical-progress` 综述：扩写临床时间线、供体猪工程、猪肾/猪心/猪肝/猪肺器官差异、免疫感染伦理监管和未来 3-5 年研究方向，并重新导出 TeX/PDF/Word
 - 使用 `nsfc-humanization` 对 `reviews/` 系列综述正文做去机器味润色：保留引用、数字、章节结构和证据边界，优化模板化句式与过度对称表达
 - 统一 `reviews/` 三篇综述的默认样式：Markdown 章节改为“摘要 / 引言 / 主体段 / 讨论 / 展望 / 结论”骨架，LaTeX 改为 `ctex + natbib + BibTeX` 原生模板，并重新导出 PDF 与 Word
 - 将 AGENTS.md / README.md 由「通用项目」模板定制为「国自然青年科学基金标书 demo」：明确项目目标、产出物与 demo 定位

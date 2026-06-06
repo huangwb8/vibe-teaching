@@ -1,12 +1,13 @@
 # 验证报告
 
 - 主稿：`pig-to-human-xenotransplantation-clinical-progress_review.md`
-- 参考文献库：93 条 BibTeX 记录
-- 正文字符数：3889
-- 引用键检查：通过，无缺失
+- 参考文献库：96 条 BibTeX 记录
+- 正文字符数：10555
+- 引用键检查：通过；正文引用键 38 个，BibTeX 无缺失
 - 导出文件：`.md`、原生 BibTeX `.tex`、`.pdf`、`.docx`
-- 结构检查：按默认骨架包含摘要、引言、猪肾临床进展、猪心经验、机器灌注交叉机会、讨论、展望、结论
-- 额外核验：补充 NEJM 2022 猪心、NEJM 2025 猪肾、NEJM 2025 通信/随访相关记录到 BibTeX
-- 残余风险：PDF 参考文献区有少量希腊字母/特殊字符字体警告；正文可读性与文件生成未受影响
-- 篇幅说明：当前为可教学演示的 Premium 证据库初稿，尚未扩写到 systematic-literature-review 默认 10000-15000 词长文
-- 样式检查：LaTeX 已改为 `ctex + natbib + BibTeX`，摘要使用 `abstract` 环境，参考文献由 `.bib` 文件生成
+- PDF 页数：14 页；`pdftotext` 可正常抽取中文正文
+- 结构检查：包含摘要、引言、转化时间线、供体猪工程、猪肾、猪心、猪肝/猪肺与机器灌注、讨论、展望、结论
+- 额外核验：补充 United Therapeutics UKidney FDA clearance、eGenesis EGEN-2784 IND clearance、United Therapeutics UHeart FDA clearance 三条临床试验公告来源到 BibTeX
+- 残余风险：Pandoc 导出 Word 时提示缺少 `zh-CN` 术语翻译文件，仅影响自动术语提示，不影响 `.docx` 生成；LaTeX 编译无缺失引用或缺字警告
+- 篇幅说明：已由短综述骨架扩写为细化版教学综述，正文字符数约为原稿 2.7 倍
+- 样式检查：LaTeX 使用 XeLaTeX、`xeCJK`、`natbib` 与 BibTeX；参考文献由 `.bib` 文件生成
