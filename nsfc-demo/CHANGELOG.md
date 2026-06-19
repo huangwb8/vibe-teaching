@@ -14,6 +14,7 @@
 
 ### Changed（变更）
 
+- 移除 AGENTS.md 中具体 AI 辅助能力名称、推荐映射表与职责速查：改为通用阶段化工作流说明，降低项目指令对具体工具清单的依赖
 - 精简 AGENTS.md：将冗长的远端 skill 全量清单压缩为项目常用 skill 速查，保留项目目标、核心 workflow、必要 skill 映射、编译、BAC 和变更记录规则
 - 为 `ev-machine-perfusion-transplant-iri` 综述插入 4 张机制/平台/质控/标志物决策表：增强 EV 在机器灌注语境下的角色区分、递送窗口、最小证据包和灌注液标志物框架，并重新导出 TeX/PDF/Word
 - 细化 `pig-to-human-xenotransplantation-clinical-progress` 综述：扩写临床时间线、供体猪工程、猪肾/猪心/猪肝/猪肺器官差异、免疫感染伦理监管和未来 3-5 年研究方向，并重新导出 TeX/PDF/Word

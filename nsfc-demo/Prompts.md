@@ -2,6 +2,10 @@
 
 ---
 
+AGENTS.md 里任何skill的名字和介绍都删除。 `注： 为了测试BenszAPI的智能路由功能。`
+
+---
+
 /Volumes/2T01/Github/vibe-teaching/nsfc-demo/reviews/ev-machine-perfusion-transplant-iri  里的figures 要插入综述里，重新出pdf
 
 ---

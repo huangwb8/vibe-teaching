@@ -10,18 +10,7 @@
 
 ## 核心工作流
 
-标书正文遵循青年科学基金常见结构，优先按任务阶段调用对应 `nsfc-*` skill：
-
-| 环节 | 推荐 skill |
-|------|------------|
-| 摘要、中英文项目简介 | `nsfc-abstract` |
-| 立项依据、研究意义、国内外现状 | `nsfc-justification-writer` |
-| 研究目标、研究内容、关键科学问题、创新点、年度计划 | `nsfc-research-content-writer` |
-| 研究方案、技术路线、机制图 | `nsfc-roadmap`、`nsfc-schematic` |
-| 研究基础、工作条件、风险应对 | `nsfc-research-foundation-writer` |
-| 经费预算 | `nsfc-budget` |
-| 文献与引用核查 | `nsfc-bib-manager`、`nsfc-ref-alignment` |
-| 篇幅、文风、质量与评审 | `nsfc-length-aligner`、`nsfc-humanization`、`nsfc-qc`、`nsfc-reviewers` |
+标书正文遵循青年科学基金常见结构，按任务阶段组织写作、校对、编译和质检。
 
 交付顺序：
 
@@ -35,52 +24,10 @@
 ## 工具链与依赖
 
 - LaTeX 模板：[ChineseResearchLaTeX](https://github.com/huangwb8/ChineseResearchLaTeX)，青年基金模板位于 `projects/NSFC_Young/`
-- AI 技能：[huangwb8/skills](https://github.com/huangwb8/skills) 与 ChineseResearchLaTeX 相关 skill；以本机已安装 skill 为准
+- AI 辅助能力以当前运行环境为准，项目指令中不维护具体名称清单
 - 编译器：必须使用 XeLaTeX，不使用 pdflatex
 - TeX 发行版：本机已具备 TeX Live 2024
 - 其他依赖：Python 3；BAC 账本使用 `bac` 命令
-
-## Skill 使用原则
-
-- 用户明确点名 skill，或任务意图明显匹配某个 skill 职责时，必须使用对应 skill
-- 多个 skill 适用时，选择覆盖需求的最小集合，并说明调用顺序
-- 标书写作优先使用 `nsfc-*`、LaTeX、综述类 skill；通用工程 skill 仅在代码、测试、Git、发布或多代理协作任务中使用
-- 下表是本项目常用 skill 速查，不替代本机已安装 skill 清单；如远端或本地 skill 变化，仅维护与本项目相关的条目
-- 更新本指令或 skill 说明时同步更新 `CHANGELOG.md`
-
-### 常用 Skill 速查
-
-| Skill | 主要用途 |
-|------|----------|
-| `nsfc-abstract` | 生成或润色中文摘要、英文摘要、项目简介和题目建议 |
-| `nsfc-justification-writer` | 写作或重构立项依据、研究意义、现状不足、科学问题与假说 |
-| `nsfc-research-content-writer` | 编排研究目标、研究内容、关键科学问题、特色创新和年度计划 |
-| `nsfc-research-foundation-writer` | 写作研究基础、工作条件、已有积累、风险应对和可行性证据链 |
-| `nsfc-budget` | 生成经费预算说明，必要时输出可渲染的预算 LaTeX/PDF |
-| `nsfc-roadmap` | 将研究内容转成可编辑、可嵌入标书的技术路线图 |
-| `nsfc-schematic` | 将机制、算法架构或模块关系转成原理图/机制图 |
-| `nsfc-length-aligner` | 检查篇幅分布，并在尽量不改原意的前提下扩写或压缩 |
-| `nsfc-humanization` | 降低 AI 机器味，优化句式、节奏和专家写作质感 |
-| `nsfc-qc` | 对标书做只读质量控制，检查文风、引用风险、篇幅结构和逻辑 |
-| `nsfc-reviewers` | 模拟函评专家，输出分级问题和可执行修改建议 |
-| `nsfc-code` | 基于标书正文推荐 NSFC 申请代码及理由 |
-| `nsfc-bib-manager` | 新增、核验和整理参考文献及 BibTeX 条目 |
-| `nsfc-ref-alignment` | 核查正文引用与 BibTeX 条目、文献语义的一致性风险 |
-| `get-review-theme` | 从文件、图片、网页或描述中提取综述主题、关键词和核心问题 |
-| `systematic-literature-review` | 执行系统综述流程：检索、筛选、评分、写作、引用管理和导出 |
-| `paper-write-sci` | 面向 LaTeX 论文项目进行 SCI 论文撰写、修订、润色与渲染 |
-| `paper-select-journal` | 基于 manuscript 和期刊信息生成投稿期刊推荐 |
-| `check-review-alignment` | 核查综述正文引用与文献内容是否语义一致 |
-| `complete-example` | 为 LaTeX 模板补充结构安全、连贯的示例内容 |
-| `make-latex-model` | 调整 ChineseResearchLaTeX 模板样式与产品线参数，并按构建入口验收 |
-| `transfer-old-latex-to-new` | 将旧 LaTeX、Word、PDF、Markdown 或零散正文迁移到新模板内容层 |
-| `auto-test-project` | 对完整项目做多轮项目级测试、质量检查、问题修复和复验 |
-| `auto-test-code` | 对代码做多轮审查、质量原则检查、问题记录和修复复验 |
-| `awesome-code` | 在明确需要多代理协作时协调规划、实现、审查和整合 |
-| `git-commit` | 分析 Git 改动并生成 conventional commit 信息，按需提交 |
-| `git-pr-review` | 只读审查 GitHub PR，评估风险、质量和是否建议合并 |
-| `git-publish-release` | 分析 tag 间历史，生成 Release Notes 并创建 GitHub Release |
-| `init-project` | 初始化项目指令、README、CHANGELOG、Git 忽略规则和标准目录 |
 
 ## 目录约定
 
