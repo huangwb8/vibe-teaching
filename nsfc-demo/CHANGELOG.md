@@ -6,6 +6,7 @@
 
 ### Added（新增）
 
+- 新增项目级 VS Code 设置：将默认窗口缩放级别配置为项目共享值，便于教学演示时保持一致显示比例
 - AGENTS.md 新增 `huangwb8/ChineseResearchLaTeX` 与 `huangwb8/skills` 的 skill 清单：列出当前远端仓库中所有 skill 名称及一句作用简介，并补充“按实际任务调用必要 skill”的原则
 - 新增 `reviews/` 系列综述交付物：围绕器官移植最近 5 年进展生成 EV/机器灌注、dd-cfDNA/多组学监测、猪到人异种移植临床进展三篇综述，并导出 Markdown、TeX、PDF、Word 与 BibTeX 参考库
 - AGENTS.md 新增「工具链与依赖」章节：说明 ChineseResearchLaTeX 模板（青年标书模板位于 `projects/NSFC_Young/`）、huangwb8/skills 技能集与 XeLaTeX 编译环境
@@ -14,6 +15,8 @@
 
 ### Changed（变更）
 
+- 将 `window.zoomLevel` 同步写入 `nsfc-demo.code-workspace`：确保通过工作区文件打开项目时也能应用当前 VS Code 窗口缩放配置
+- 调整 `.gitignore`：放行 `.vscode/settings.json` 作为项目共享设置，同时继续忽略 `.vscode` 下其他个人化文件
 - 按 `init-project` 2.3.2 最新规范优化系统文件：补齐 AGENTS.md 必需章节命名、有机更新原则和代码修改闭环约束，并扩展 `.gitignore` 对 AI/skill 中间产物目录的忽略规则
 - 移除 AGENTS.md 中具体 AI 辅助能力名称、推荐映射表与职责速查：改为通用阶段化工作流说明，降低项目指令对具体工具清单的依赖
 - 精简 AGENTS.md：将冗长的远端 skill 全量清单压缩为项目常用 skill 速查，保留项目目标、核心 workflow、必要 skill 映射、编译、BAC 和变更记录规则

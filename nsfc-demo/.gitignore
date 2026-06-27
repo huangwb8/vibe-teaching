@@ -114,6 +114,12 @@ dmypy.json
 .parallel_vibe/
 .write-paper-sci/
 
+# === VS Code 项目共享设置 ===
+!nsfc-demo.code-workspace
+!.vscode/
+.vscode/*
+!.vscode/settings.json
+
 # === LaTeX 编译中间产物 ===
 # 说明：保留最终成稿 PDF（demo 展示用），仅忽略编译中间文件；*.log 已在共性规则中忽略
 *.aux
