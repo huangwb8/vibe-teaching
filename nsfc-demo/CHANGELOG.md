@@ -14,6 +14,7 @@
 
 ### Changed（变更）
 
+- 按 `init-project` 2.3.2 最新规范优化系统文件：补齐 AGENTS.md 必需章节命名、有机更新原则和代码修改闭环约束，并扩展 `.gitignore` 对 AI/skill 中间产物目录的忽略规则
 - 移除 AGENTS.md 中具体 AI 辅助能力名称、推荐映射表与职责速查：改为通用阶段化工作流说明，降低项目指令对具体工具清单的依赖
 - 精简 AGENTS.md：将冗长的远端 skill 全量清单压缩为项目常用 skill 速查，保留项目目标、核心 workflow、必要 skill 映射、编译、BAC 和变更记录规则
 - 为 `ev-machine-perfusion-transplant-iri` 综述插入 4 张机制/平台/质控/标志物决策表：增强 EV 在机器灌注语境下的角色区分、递送窗口、最小证据包和灌注液标志物框架，并重新导出 TeX/PDF/Word

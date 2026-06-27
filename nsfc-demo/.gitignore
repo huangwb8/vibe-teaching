@@ -85,6 +85,35 @@ dmypy.json
 
 # === 自定义规则（在下方添加项目特定的忽略规则）===
 
+# === Agent Skills / AI 工作流中间产物 ===
+.bensz-api/
+.research-idea/
+.auto-test-code-run.json
+.awesome-code/
+.bensz-skills/
+.bensz-skills-backup/
+.check-review-alignment/
+.compact-bensz-skills/
+.download-fulltext-pdf/
+.dudu-optimize-prompt/
+.explain-figures/
+.explain-results/
+.find-best-skill/
+.git-pr-review/
+.install-bensz-skills/
+.make-research-plan/
+.md-to-word/
+.mirror/
+.nsfc-reviewers/
+.nsfc-roadmap/
+.nsfc-schematic/
+.paper-explain-figures/
+.paper-know-journal/
+.paper-select-journal/
+.paper-write-sci/
+.parallel_vibe/
+.write-paper-sci/
+
 # === LaTeX 编译中间产物 ===
 # 说明：保留最终成稿 PDF（demo 展示用），仅忽略编译中间文件；*.log 已在共性规则中忽略
 *.aux
